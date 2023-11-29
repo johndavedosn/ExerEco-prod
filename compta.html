@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<!-- Alpine js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+</head>
+<body>
+    <header class="hdr">
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">
+                <i class='bx bxs-chevron-down'></i></button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#">Home</a>
+              <a href="#">About Us</a>
+              <a href="#">Exercises</a>
+            </div>
+          </div>
+        <h2>ExerEco</h2>
+        <nav id="navbar" class="navbar">
+            <a href="">Home</a>
+            <a href="">Exercises</a>
+            <a href="">About Us </a>
+        </nav>
+    </header>
+        <div class="main">
+            <h2>Exercise 1</h2>
+            <p><strong>Mr. JABER</strong> exploite un commerce qui comprend les éléments suivants, au <strong>1/1/ 2022</strong>  :</p>
+            <ul>
+                <p>Caisse : <strong>72000 DH</strong> </p>
+                <p>Créance sur les clients: <strong>290,000 DH</strong></p>
+                <p>Mobilier du bureau: <strong>180,000 DH</strong></p>
+                <p>Dettes envers les fournisseurs: <strong>350,000 DH</strong></p>
+                <p>Matériel de transport: <strong>320,000 DH</strong></p>
+                <p>Avoir en banque : <strong>148,000 DH</strong></p>
+                <p>Marchandises : <strong>940,000 DH</strong></p>
+            </ul>
+         <h4>Travail a fair : </h4>
+         <section class="answers"x-data="{
+         answer: 1948000,
+         answer1: null,
+         validate (){
+             if (this.answer == this.answer1){
+                 document.getElementById('ua').style.color = '#34eb58'
+                 document.getElementById('validator').style.display = 'none'
+                document.getElementById('answer-input').style.display = 'none'
+                }
+             else {
+                 document.getElementById('ua').style.color = 'red'
+ 
+             }
+         }
+     }
+         ">
+         <p>Calculer le capital et dresser le bilan à cette date.</p>
+       <p>  Le capital est : <span x-text="answer1" id="ua"></span> DH</p>
+         <input type="number" placeholder="Capital" x-model="answer1" class="answer-input"><br><br>
+         <button @click="validate" class="btn btn-primary" id="validator">Valideé</button>
+        </section>
+        </div>
+        
+</body>
+</html>
