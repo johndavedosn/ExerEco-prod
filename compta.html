@@ -1,72 +1,214 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <!-- Boxicons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-<!-- Alpine js -->
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <!-- Boxicons -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Alpine js -->
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-</head>
-<body>
-    <header class="hdr">
-        <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">
-                <i class='bx bxs-chevron-down'></i></button>
-            <div id="myDropdown" class="dropdown-content">
-              <a href="#">Home</a>
-              <a href="#">About Us</a>
-              <a href="#">Exercises</a>
+    </head>
+    <body>
+        <header class="hdr">
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">
+                    <i class='bx bxs-chevron-down'></i></button>
+                <div id="myDropdown" class="dropdown-content">
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Exercises</a>
+                </div>
             </div>
-          </div>
-        <h2>ExerEco</h2>
-        <nav id="navbar" class="navbar">
-            <a href="">Home</a>
-            <a href="">Exercises</a>
-            <a href="">About Us </a>
-        </nav>
-    </header>
-        <div class="main">
-            <h2>Exercise 1</h2>
-            <p><strong>Mr. JABER</strong> exploite un commerce qui comprend les éléments suivants, au <strong>1/1/ 2022</strong>  :</p>
-            <ul>
-                <p>Caisse : <strong>72000 DH</strong> </p>
-                <p>Créance sur les clients: <strong>290,000 DH</strong></p>
-                <p>Mobilier du bureau: <strong>180,000 DH</strong></p>
-                <p>Dettes envers les fournisseurs: <strong>350,000 DH</strong></p>
-                <p>Matériel de transport: <strong>320,000 DH</strong></p>
-                <p>Avoir en banque : <strong>148,000 DH</strong></p>
-                <p>Marchandises : <strong>940,000 DH</strong></p>
-            </ul>
-         <h4>Travail a fair : </h4>
-         <section class="answers"x-data="{
-         answer: 1948000,
-         answer1: null,
-         validate (){
-             if (this.answer == this.answer1){
-                 document.getElementById('ua').style.color = '#34eb58'
-                 document.getElementById('validator').style.display = 'none'
-                document.getElementById('answer-input').style.display = 'none'
+            <h2>ExerEco</h2>
+            <nav id="navbar" class="navbar">
+                <a href="">Home</a>
+                <a href="">Exercises</a>
+                <a href="">About Us </a>
+            </nav>
+        </header>
+            <div class="main">
+                <h2>Exercise 1</h2>
+                <p><strong>Mr. JABER</strong> exploite un commerce qui comprend les éléments suivants, au <strong>1/1/ 2022</strong>  :</p>
+                <ul>
+                    <p>Caisse : <strong>72000 DH</strong> </p>
+                    <p>Créance sur les clients: <strong>290,000 DH</strong></p>
+                    <p>Mobilier du bureau: <strong>180,000 DH</strong></p>
+                    <p>Dettes envers les fournisseurs: <strong>350,000 DH</strong></p>
+                    <p>Matériel de transport: <strong>320,000 DH</strong></p>
+                    <p>Avoir en banque : <strong>148,000 DH</strong></p>
+                    <p>Marchandises : <strong>940,000 DH</strong></p>
+                </ul>
+            <h4>Travail a fair : </h4>
+            <section class="answer-1"x-data="{
+            answer: 1948000,
+            answer1: null,
+            validate (){
+                if (this.answer == this.answer1){
+                    document.getElementById('ua').style.color = '#34eb58'
+                    }
+                else {
+                    document.getElementById('ua').style.color = 'red'
+    
                 }
-             else {
-                 document.getElementById('ua').style.color = 'red'
- 
-             }
-         }
-     }
-         ">
-         <p>Calculer le capital et dresser le bilan à cette date.</p>
-       <p>  Le capital est : <span x-text="answer1" id="ua"></span> DH</p>
-         <input type="number" placeholder="Capital" x-model="answer1" class="answer-input"><br><br>
-         <button @click="validate" class="btn btn-primary" id="validator">Valideé</button>
-        </section>
-        </div>
-        
-</body>
-</html>
+            }
+        }
+            ">
+            <p>Calculer le capital et dresser le bilan à cette date.</p>
+        <p>  Le capital est : <span x-text="answer1" id="ua"></span> DH</p>
+            <input type="number" placeholder="Capital" x-model="answer1" class="answer-input"><br><br>
+            <button @click="validate" class="btn btn-primary" id="validator">Valideé</button>
+            </section>
+            <section class="answer-2">
+                <h4 class="title">Entreprise JABER, Bilan de 1/1/2022</h4>
+                
+                <div class="container mt-5 cont" x-data="{
+                    class1p: null,
+                    class1a: null,
+                    class2p: null,
+                    class2a: null,
+                    class3p: null,
+                    class3a: null,
+                    answers_passif: ['financement permanent', 'passif circulant', 'trésorerie passif'], 
+                    answers_actif: ['actif immobilisé', 'actif circulant', 'trésorerie actif'],
+                   validate () {
+                    if (this.class1p == this.answers_passif[0]){
+                        document.getElementById('class1ps').style.color = '#34eb58'
+                    }
+                    else {
+                        document.getElementById('class1ps').style.color = 'red'
+                    }
+                    if (this.class1a == this.answers_actif[0]){
+                        document.getElementById('class1as').style.color = '#34eb58'
+                    }
+                    else {
+                        document.getElementById('class1as').style.color = 'red'
+                    }
+                    if (this.class2p == this.answers_passif[1]){
+                        document.getElementById('class2ps').style.color = '#34eb58'
+                    }
+                    else {
+                        document.getElementById('class2ps').style.color = 'red'
+                    }
+                    if (this.class2a == this.answers_actif[1]){
+                        document.getElementById('class2as').style.color = '#34eb58'
+                    }
+                    else {
+                        document.getElementById('class2as').style.color = 'red'
+                    }
+                    if (this.class3p == this.answers_passif[2]){
+                        document.getElementById('class3ps').style.color = '#34eb58'
+                    }
+                    else {
+                        document.getElementById('class3ps').style.color = 'red'
+                    }
+                    if (this.class3a == this.answers_actif[2]){
+                        document.getElementById('class3as').style.color = '#34eb58'
+                    }
+                    else {
+                        document.getElementById('class3as').style.color = 'red'
+                    }
+                   }
+                }">
+            
+                    <div class="row">
+                        <!-- Assets Table -->
+                        <div class="col-md-12 mb-4">
+                            <h4 class="text-center">Actif</h4>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Emploi</th>
+                                        <th scope="col">Montant</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>1. <span x-text="class1a" id="class1as"></span></th>
+                                    </tr>
+                                    <tr>
+                                            <th>Mobilier de bureau</th>
+                                            <th>180,000</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Matériel de transport</th>
+                                        <th>320,000</th>
+                                    </tr>
+                                    <tr>
+                                        <th>2. <span x-text="class2a"  id="class2as"></span> </th>
+                                    </tr>
+                                    <tr>
+                                        <th>Clients</th>
+                                        <th>290,000</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Marchandises</th>
+                                        <th>940,000</th>
+                                    </tr>
+                                    <tr>
+                                        <th>3. <span x-text="class3a" id="class3as"></span> </th>
+                                    </tr>   
+                                    <tr>
+                                        <th>Caisse</th>
+                                        <th>72,000</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Banque</th>
+                                        <th>148,000</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+            
+                        <!-- Liabilities Table -->
+                        <div class="col-md-12">
+                            <h4 class="text-center">Passif</h4>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Ressource</th>
+                                        <th scope="col">Montant</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>1. <span x-text="class1p"  id="class1ps"></span> </th>
+                                    </tr>
+                                    <tr>
+                                        <th>Fournisseurs</th>
+                                        <th>350,000</th> 
+                                    </tr>
+                                    <tr>
+                                        <th>2. <span x-text="class2p"  id="class2ps"></span></th>
+                                    </tr>
+                                    <tr>
+                                        <th>3. <span x-text="class3p"  id="class3ps"></span></th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="answers-inputs">
+                        <h2>Passif</h2>
+                        <h2>Actif</h2>
+                      <input type="text" placeholder="classs 1" x-model="class1p">
+                      <input type="text" placeholder="classs 1" x-model="class1a">
+                      <input type="text" placeholder="classs 2" x-model="class2p">
+                      <input type="text" placeholder="classs 2" x-model="class2a">
+                      <input type="text" placeholder="classs 3" x-model="class3p">
+                      <input type="text" placeholder="classs 3" x-model="class3a">
+    
+                    </div>
+                    <button @click="validate">Valideé</button>
+                </div>
+
+            </section>
+                </div>
+            
+    </body>
+    </html>
