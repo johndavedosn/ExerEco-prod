@@ -158,8 +158,11 @@
     color: white;
 }
 .tests {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   gap: 10px;
 }
 li {
     font-size: 20px;
@@ -183,4 +186,18 @@ ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
+}
+.note {
+    background-color: rgb(232, 232, 126);
+    border-radius: 10px;
+    width: 400px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 10px gray;
+
+}
+.card {
+   border: 1px solid gray;
 }
