@@ -43,7 +43,7 @@
     box-shadow: 4px 4px 30px gray;
     border-radius: 10px;
     background-color: #4CAF50;
-    color: #ffff;
+    color: black;
     transition: transform 0.2s;
 }
 .strt:hover {
