@@ -37,9 +37,9 @@
     </header>
     <div class="main" x-data="{
         answer: 'finalités',
-        answer1: null,
+        answer_user: null,
         validate (){
-            if (this.answer == this.answer1){
+            if (this.answer == this.answer_user){
                 document.getElementById('ua').style.color = '#34eb58'
             }
             else {
@@ -51,11 +51,80 @@
        <h2>Exercise 1</h2>
        <p>Remplir les trous : <br>
        L'entreprise est un system recherchant la realisation <br>
-      d'un certain nombre de <span x-text="answer1" id="ua"></span> but majeur </p>
+      d'un certain nombre de <span x-text="answer_user" id="ua"></span> but majeur </p>
     <br><br>
-    <input type="text" placeholder="Reponse" x-model="answer1"><br><br>
+    <input type="text" placeholder="Reponse" x-model="answer_user"><br><br>
     <button @click="validate" class="btn btn-primary">Valideé</button>
-    </div>
+    
+</div>
+<div class="e2" x-data="{
+    Activity: 'vente des produits',
+    Tail: 'TGE',
+    form_juridique : 'SARL',
+    secteur: 'secondair',
+    ca: 40,
+    user_activity: null,
+    user_tail: null,
+    user_secteur: null,
+    user_ca: null,
+    validate (){
+        if (this.Activity == this.user_activity) {
+            document.getElementById('act').style.color = '#34eb58'
+        }
+        else {
+            document.getElementById('act').style.color = 'red'
+
+        }
+        if (this.Tail == this.user_tail) {
+            document.getElementById('tll').style.color = '#34eb58'
+        }
+        else {
+            document.getElementById('tll').style.color = 'red'
+
+        }
+        if (this.secteur == this.user_secteur) {
+            document.getElementById('sctr').style.color = '#34eb58'
+        }
+        else {
+            document.getElementById('sctr').style.color = 'red'
+
+        }
+        
+        if (this.ca == this.user_ca) {
+            document.getElementById('chfr').style.color = '#34eb58'
+        }
+        else {
+            document.getElementById('chfr').style.color = 'red'
+
+        }
+        
+    }
+}">
+    <h2>Exercise 2</h2>
+    <p>
+        <b>Les paniers d'avoine</b> Est une entreprise qui <br>
+         vend des paniers de fruits et légumes, Voici les informations de l'entreprise  : <br>
+        </p>
+        <p>
+            <b>Nombre des employés : </b>  10 000 <br>
+            <b>Chiffre d'affair : </b> 40M DH
+
+        </p>
+        <h3>Travail a fair : </h3>
+        <p>Activité de l'entreprise : <span id="act" x-text="user_activity"></span></p>
+        <p>Form juridique : <span x-text="form_juridique"></span></p>
+        <p>Taille de l'entreprise : <span id="tll" x-text="user_tail"></span> (TPE, PME, ...)</p>
+        <p>Chiffre d'affair : <span id="chfr" x-text="user_ca"></span>M DH</p>
+        <p>Secteur de l'entreprise : <span id="sctr" x-text="user_secteur"></span></p>
+        <br>
+        <input type="text" placeholder="Activité" x-model="user_activity"><br>  
+        <input type="text" placeholder="Tailel de l'entreprise" x-model="user_tail"><br>
+        <input type="number" placeholder="Chiffre d'affair" x-model="user_ca"> <br>
+        <input type="text" placeholder="Secteur" x-model="user_secteur"><br>
+
+        <button @click="validate" class="btn btn-primary">Valideé</button>
+
+        </div>
     <script src="main.js"></script>
 </body>
 </html>
