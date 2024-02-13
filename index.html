@@ -5,17 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Explorez ExerEco, la plateforme interactive d'apprentissage économique. Des exercices interactifs pour simplifier l'économie. Commencez à apprendre maintenant !">
-    <meta name="og:image" content="https://exereco.000webhostapp.com/logo.png">
+    <meta name="og:image" content="./logo.png">
     <meta name="keywords" content="Exereco">
     <title>ExerEco</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="style.css" as="style">
     <!-- Bootstrap css -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
     <!-- Boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Alpine js -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="main.js"></script>
 </head>
 <body>
 <!-- Website header -->
@@ -81,6 +82,5 @@
     </footer>
 </div>
 <!-- JS -->
-<script src="main.js"></script>
 </body>
 </html>
