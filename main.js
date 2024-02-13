@@ -17,7 +17,12 @@ function myFunction() {
       }
     }
   }
-var strtbtn = document.getElementById("strt")
-strtbtn.addEventListener("click", () => {
-  window.location.href = "./exercises.html"
+
+document.querySelector("#strt").addEventListener("click", () => {
+    window.location.href = "exercises.html"
+    
+})
+document.querySelector("#strt2").addEventListener("click", () => {
+    window.location.href = "exercises.html"
+    
 })
